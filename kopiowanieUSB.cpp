@@ -5,24 +5,24 @@
 
 int main() {
     // Ścieżka źródłowa
-    std::string source = "C:\\Programowanie";  // Użyj podwójnych ukośników
+    std::string source = "C:\\Twoja sciezka";
 
     // Ścieżka docelowa (dysk USB)
-    std::string destination = "E:\\";  // Użyj podwójnych ukośników
+    std::string destination = "daj tutaj litere twojego USB:\\";  // Użyj podwójnych ukośników
 
     // Sprawdzanie, czy dysk USB istnieje
     if (!std::filesystem::exists(destination)) {
-        std::cerr << "USB drive (E:) doesn't exist!" << std::endl;
+        std::cerr << "np.E doesn't exist!" << std::endl;
         return 1;
     }
 
     // Sprawdzanie, czy folder źródłowy istnieje
     if (!std::filesystem::exists(source)) {
-         std::cerr << "Source folder (C:\\Programowanie) does not exist!" << std::endl;
+         std::cerr << "Source folder (C:\\Twoja sciezka) does not exist!" << std::endl;
         return 1;
     }
 
-    std::cout << "Starting copying files from 'Programowanie' to 'USB drive (E:)'" << std::endl;
+    std::cout << "Starting copying files from 'twoja sciezka' to 'np. E'" << std::endl;
 
     // Konstrukcja polecenia xcopy z przekierowaniem błędów do nul
     std::string command = "xcopy \"" + source + "\\\" \"" + destination + "\" /E /I /Q /H /Y /C /R /K > nul 2>&1";
