@@ -37,5 +37,9 @@ int main() {
         std::cerr << "There was a problem during copying! Error code: " << result << std::endl;
     }
 
+    // Czekaj na wciśnięcie klawisza przed zakończeniem programu
+    std::cout << std::endl <<"Press Enter to exit...";
+    std::cin.get(); // Czeka na naciśnięcie klawisza
+
     return 0;
 }
