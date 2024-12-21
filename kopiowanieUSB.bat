@@ -5,8 +5,8 @@ if not defined source set "source=C:\Programowanie"
 if not defined destination set "destination=D:\"
 
 REM Debug: Show the environment variables
-echo source=%source%
-echo destination=%destination%
+echo source: "%source%"
+echo destination: "%destination%"
 
 REM Check if the source and destination folders exist
 if not exist "%source%" (
@@ -22,7 +22,7 @@ if not exist "%destination%" (
 )
 
 REM Run the C++ program with the environment variables
-echo Running kopiowanieUSB.exe with the environment variables...
+echo.
 start "" /B kopiowanieUSB.exe
 
 REM Do not pause after execution if there are no errors
