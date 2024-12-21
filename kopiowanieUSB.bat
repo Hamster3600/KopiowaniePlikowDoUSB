@@ -2,7 +2,7 @@
 
 REM Set environment variables if not already set
 if not defined source set "source=C:\Programowanie"
-if not defined destination set "destination=D:\Test"
+if not defined destination set "destination=D:\"
 
 REM Debug: Show the environment variables
 echo source=%source%
